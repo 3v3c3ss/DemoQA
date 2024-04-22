@@ -131,7 +131,7 @@ describe('', () => {
         });
      });
 
-     it.only('test api rquest PUT', () => {
+     it('test api rquest PUT', () => {
         cy.request({
             method: 'PUT',
             url: 'https://petstore.swagger.io/v2/pet/10',
@@ -145,6 +145,10 @@ describe('', () => {
         });
     });
 
+    it('', () =>{
+
+    });
+
     it.only('test api requests POST methofd in pushingIt', () => {
         const username = 'usuario' + Math.floor(Math.random() * 1000);
         const password = '123456!';
@@ -154,8 +158,8 @@ describe('', () => {
         const year = '1980';
 
         cy.request({
-            method: 'POST',
             url: 'https://pushing-it-backend.herokuapp.com/api/register',
+            method: 'POST',
             body: {
                 "username": username, 
                 "password": password,
